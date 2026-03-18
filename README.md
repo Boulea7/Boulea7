@@ -35,11 +35,11 @@
 <table width="100%">
   <tr>
     <td width="50%" valign="top">
-      <h3>⚡ <a href="https://github.com/Boulea7/ccsw">ccsw</a></h3>
-      <p>一键切换 Claude Code / Codex AI 供应商的轻量 CLI 工具，完美适配 CI/CD 环境</p>
+      <h3>⚡ <a href="https://github.com/Boulea7/ccswitch--terminal">ccswitch-terminal</a></h3>
+      <p>在终端中一键切换管理 Claude Code / Codex / Gemini CLI 供应商与 API Key，完美适配服务器及 CI/CD 环境</p>
       <p>
-        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-        <img src="https://img.shields.io/github/stars/Boulea7/ccsw?style=social" />
+        <img src="https://img.shields.io/badge/Shell-121011?style=flat-square&logo=gnu-bash&logoColor=white" />
+        <img src="https://img.shields.io/github/stars/Boulea7/ccswitch--terminal?style=social" />
       </p>
     </td>
     <td width="50%" valign="top">
