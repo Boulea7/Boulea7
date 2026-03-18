@@ -9,7 +9,20 @@
 热衷于打造提升开发体验的 AI 工具，探索强化学习在组合优化中的应用。<br/>
 从命令行工具到浏览器扩展，从 ML 研究到产品落地，持续构建中。
 
+<br/>
+
+<img src="https://komarev.com/ghpvc/?username=Boulea7&color=6E40C9&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" />
+
 </div>
+
+---
+
+## 🔭 当前在做
+
+- 🚀 **正在构建**: [ohmyclaude](https://github.com/Boulea7/ohmyclaude) — Claude Code 一键配置工具包 & [MindSnap](https://github.com/Boulea7/MindSnap) — 多端 AI 知识工作区
+- 🧠 **深度研究**: 强化学习与组合优化算法，构建 [CO-Benchmark-Datasets](https://github.com/Boulea7/CO-Benchmark-Datasets)
+- 🎨 **最新灵感**: 用 Nanobanana 模型探索漫画自动上色 ([ChromaticManga](https://github.com/Boulea7/ChromaticManga))
+- 💬 **乐于交流**: AI 工具链落地实践、Chrome 扩展架构设计、RL 算法实验
 
 ---
 
@@ -83,6 +96,22 @@
 <img height="170" src="https://github-readme-stats.vercel.app/api?username=Boulea7&show_icons=true&hide_border=true&title_color=6E40C9&text_color=555555&icon_color=6E40C9&bg_color=00000000" />
 <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Boulea7&layout=compact&hide_border=true&title_color=6E40C9&text_color=555555&bg_color=00000000&langs_count=8" />
 
+<br/>
+
+<img src="https://streak-stats.demolab.com?user=Boulea7&theme=transparent&hide_border=true&ring=6E40C9&fire=6E40C9&currStreakNum=6E40C9&sideNums=555555&currStreakLabel=555555&sideLabels=555555&dates=555555" alt="GitHub Streak" />
+
+</div>
+
+---
+
+## 🐍 贡献轨迹
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Boulea7/Boulea7/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Boulea7/Boulea7/output/github-contribution-grid-snake.svg">
+    <img alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/Boulea7/Boulea7/output/github-contribution-grid-snake.svg">
+  </picture>
 </div>
 
 ---
@@ -93,6 +122,10 @@
 
 <a href="mailto:pvt.blocksongs@gmail.com">
   <img src="https://img.shields.io/badge/Email-pvt.blocksongs%40gmail.com-6E40C9?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
+&nbsp;
+<a href="https://github.com/Boulea7">
+  <img src="https://img.shields.io/badge/GitHub-Boulea7-181717?style=for-the-badge&logo=github&logoColor=white" />
 </a>
 
 </div>
