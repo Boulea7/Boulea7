@@ -21,12 +21,16 @@
 
 <div align="center">
 
+<sub>Languages</sub>
+
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
 <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
 <img src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white" />
 <img src="https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white" />
 
 <br/>
+
+<sub>Frontend</sub>
 
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
 <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" />
@@ -36,11 +40,15 @@
 
 <br/>
 
+<sub>Backend</sub>
+
 <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
 <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
 <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
 
 <br/>
+
+<sub>Data &amp; Infrastructure</sub>
 
 <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
@@ -63,6 +71,7 @@
       <p>
         <img src="https://img.shields.io/badge/Shell-121011?style=flat-square&logo=gnu-bash&logoColor=white" />
         <img src="https://img.shields.io/github/stars/Boulea7/ccswitch--terminal?style=social" />
+        <img src="https://img.shields.io/github/last-commit/Boulea7/ccswitch--terminal?style=flat-square&color=6E40C9" />
       </p>
     </td>
     <td width="50%" valign="top">
@@ -72,6 +81,7 @@
         <img src="https://img.shields.io/badge/Markdown-000000?style=flat-square&logo=markdown&logoColor=white" />
         <img src="https://img.shields.io/badge/Shell-121011?style=flat-square&logo=gnu-bash&logoColor=white" />
         <img src="https://img.shields.io/github/stars/Boulea7/Codex-Auto-Memory?style=social" />
+        <img src="https://img.shields.io/github/last-commit/Boulea7/Codex-Auto-Memory?style=flat-square&color=6E40C9" />
       </p>
     </td>
   </tr>
@@ -82,6 +92,7 @@
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
         <img src="https://img.shields.io/github/stars/Boulea7/ohmyclaude?style=social" />
+        <img src="https://img.shields.io/github/last-commit/Boulea7/ohmyclaude?style=flat-square&color=6E40C9" />
       </p>
     </td>
     <td width="50%" valign="top">
@@ -91,6 +102,7 @@
         <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" />
         <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
         <img src="https://img.shields.io/github/stars/Boulea7/OpenInfinity?style=social" />
+        <img src="https://img.shields.io/github/last-commit/Boulea7/OpenInfinity?style=flat-square&color=6E40C9" />
       </p>
     </td>
   </tr>
