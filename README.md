@@ -17,14 +17,6 @@
 
 ---
 
-## 当前在做
-
-- **正在构建**: [ohmyclaude](https://github.com/Boulea7/ohmyclaude) — Claude Code 一键配置工具包 & [MindSnap](https://github.com/Boulea7/MindSnap) — 多端 AI 知识工作区
-- **最新灵感**: 用 Nanobanana 模型探索漫画自动上色与破损艺术品还原 ([ChromaticManga](https://github.com/Boulea7/ChromaticManga))
-- **乐于交流**: AI 工具链落地实践、Chrome 扩展架构设计
-
----
-
 ## 技术栈
 
 <div align="center">
