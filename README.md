@@ -166,7 +166,7 @@ My dream is to contribute to the path toward AGI.
 <div align="center">
 
 <sub>
-工作机会、开源合作、AI 比赛等欢迎 <a href="mailto:pvt.blocksongs@gmail.com?subject=Hello%20Boulea7">邮件联系我</a>。 /
+工作机会、开源合作、AI 比赛等欢迎 <a href="mailto:pvt.blocksongs@gmail.com?subject=Hello%20Boulea7">邮件联系我</a>。<br/>
 For opportunities, open-source collaboration, or AI competitions, feel free to <a href="mailto:pvt.blocksongs@gmail.com?subject=Hello%20Boulea7">email me</a>.
 </sub>
 
