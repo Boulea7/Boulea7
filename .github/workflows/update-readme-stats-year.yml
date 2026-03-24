@@ -1,4 +1,4 @@
-name: Update README Stats Year
+name: Update README Stats
 
 on:
   workflow_dispatch:
@@ -12,7 +12,7 @@ on:
       - .github/workflows/update-readme-stats-year.yml
 
 jobs:
-  update-year:
+  update-stats:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -21,33 +21,170 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Update current year in README stats card
+      - name: Update current-year README stats
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           export CURRENT_YEAR="$(date -u +%Y)"
+          export GITHUB_LOGIN="Boulea7"
           python3 - <<'PY'
+          import json
           import os
           import re
+          import urllib.request
           from pathlib import Path
 
           readme_path = Path("README.md")
           content = readme_path.read_text(encoding="utf-8")
           current_year = os.environ["CURRENT_YEAR"]
+          github_login = os.environ["GITHUB_LOGIN"]
+          github_token = os.environ["GITHUB_TOKEN"]
 
-          pattern = re.compile(r'(github-readme-stats\.vercel\.app/api\?username=Boulea7[^"\n]*)')
-          match = pattern.search(content)
-          if not match:
+          year_start = f"{current_year}-01-01T00:00:00Z"
+          year_end = f"{current_year}-12-31T23:59:59Z"
+
+          query = """
+          query($login:String!,$from:DateTime!,$to:DateTime!,$issueAfter:String,$prAfter:String,$reviewAfter:String,$repoAfter:String){
+            user(login:$login){
+              contributionsCollection(from:$from, to:$to){
+                commitContributionsByRepository(maxRepositories:100){
+                  repository { nameWithOwner }
+                }
+                issueContributions(first:100, after:$issueAfter){
+                  nodes { issue { repository { nameWithOwner } } }
+                  pageInfo { hasNextPage endCursor }
+                }
+                pullRequestContributions(first:100, after:$prAfter){
+                  nodes { pullRequest { repository { nameWithOwner } } }
+                  pageInfo { hasNextPage endCursor }
+                }
+                pullRequestReviewContributions(first:100, after:$reviewAfter){
+                  nodes { pullRequest { repository { nameWithOwner } } }
+                  pageInfo { hasNextPage endCursor }
+                }
+                repositoryContributions(first:100, after:$repoAfter){
+                  nodes { repository { nameWithOwner } }
+                  pageInfo { hasNextPage endCursor }
+                }
+              }
+            }
+          }
+          """
+
+          def run_query(variables):
+              request = urllib.request.Request(
+                  "https://api.github.com/graphql",
+                  data=json.dumps({"query": query, "variables": variables}).encode("utf-8"),
+                  headers={
+                      "Authorization": f"Bearer {github_token}",
+                      "Content-Type": "application/json",
+                      "Accept": "application/vnd.github+json",
+                  },
+                  method="POST",
+              )
+              with urllib.request.urlopen(request) as response:
+                  payload = json.loads(response.read().decode("utf-8"))
+              if "errors" in payload:
+                  raise SystemExit(f"GraphQL query failed: {payload['errors']}")
+              return payload["data"]["user"]["contributionsCollection"]
+
+          repos = set()
+          cursors = {
+              "issueAfter": None,
+              "prAfter": None,
+              "reviewAfter": None,
+              "repoAfter": None,
+          }
+          commit_loaded = False
+
+          while True:
+              collection = run_query(
+                  {
+                      "login": github_login,
+                      "from": year_start,
+                      "to": year_end,
+                      **cursors,
+                  }
+              )
+
+              if not commit_loaded:
+                  for item in collection["commitContributionsByRepository"]:
+                      repos.add(item["repository"]["nameWithOwner"])
+                  commit_loaded = True
+
+              for item in collection["issueContributions"]["nodes"]:
+                  repos.add(item["issue"]["repository"]["nameWithOwner"])
+              for item in collection["pullRequestContributions"]["nodes"]:
+                  repos.add(item["pullRequest"]["repository"]["nameWithOwner"])
+              for item in collection["pullRequestReviewContributions"]["nodes"]:
+                  repos.add(item["pullRequest"]["repository"]["nameWithOwner"])
+              for item in collection["repositoryContributions"]["nodes"]:
+                  repos.add(item["repository"]["nameWithOwner"])
+
+              next_cursors = {
+                  "issueAfter": collection["issueContributions"]["pageInfo"]["endCursor"]
+                  if collection["issueContributions"]["pageInfo"]["hasNextPage"]
+                  else None,
+                  "prAfter": collection["pullRequestContributions"]["pageInfo"]["endCursor"]
+                  if collection["pullRequestContributions"]["pageInfo"]["hasNextPage"]
+                  else None,
+                  "reviewAfter": collection["pullRequestReviewContributions"]["pageInfo"]["endCursor"]
+                  if collection["pullRequestReviewContributions"]["pageInfo"]["hasNextPage"]
+                  else None,
+                  "repoAfter": collection["repositoryContributions"]["pageInfo"]["endCursor"]
+                  if collection["repositoryContributions"]["pageInfo"]["hasNextPage"]
+                  else None,
+              }
+
+              if next_cursors == {
+                  "issueAfter": None,
+                  "prAfter": None,
+                  "reviewAfter": None,
+                  "repoAfter": None,
+              }:
+                  break
+
+              cursors = next_cursors
+
+          stats_pattern = re.compile(r'(github-readme-stats\.vercel\.app/api\?username=Boulea7[^"\n]*)')
+          stats_match = stats_pattern.search(content)
+          if not stats_match:
               raise SystemExit("GitHub stats card URL not found in README.md")
 
-          url = match.group(1)
-          if "commits_year=" in url:
-              updated_url = re.sub(r"commits_year=\d{4}", f"commits_year={current_year}", url, count=1)
+          stats_url = stats_match.group(1)
+          if "commits_year=" in stats_url:
+              stats_url = re.sub(r"commits_year=\d{4}", f"commits_year={current_year}", stats_url, count=1)
           else:
-              updated_url = f"{url}&commits_year={current_year}"
+              stats_url = f"{stats_url}&commits_year={current_year}"
+          if "cache_seconds=" not in stats_url:
+              stats_url = f"{stats_url}&cache_seconds=21600"
 
-          if "cache_seconds=" not in updated_url:
-              updated_url = f"{updated_url}&cache_seconds=21600"
+          contrib_badge = (
+              f"https://img.shields.io/badge/Contributed%20to%20%28{current_year}%29-"
+              f"{len(repos)}%20repos-D4A017?style=flat-square"
+          )
+          contrib_alt = f"Contributed to {len(repos)} repositories in {current_year}"
 
-          updated_content = content[:match.start(1)] + updated_url + content[match.end(1):]
+          badge_pattern = re.compile(
+              r'<img src="https://img\.shields\.io/badge/Contributed%20to%20%28\d{4}%29-[^"]+" alt="Contributed to \d+ repositories in \d{4}" />'
+          )
+          badge_replacement = f'<img src="{contrib_badge}" alt="{contrib_alt}" />'
+          if badge_pattern.search(content):
+              updated_content = badge_pattern.sub(badge_replacement, content, count=1)
+          else:
+              insert_anchor = '<br/>\n\n<img src="https://streak-stats.demolab.com'
+              if insert_anchor not in content:
+                  raise SystemExit("Contribution badge insertion point not found in README.md")
+              updated_content = content.replace(
+                  insert_anchor,
+                  f'<br/>\n\n{badge_replacement}\n\n<br/>\n\n<img src="https://streak-stats.demolab.com',
+                  1,
+              )
+
+          updated_content = (
+              updated_content[: stats_match.start(1)] + stats_url + updated_content[stats_match.end(1) :]
+          )
+
           if updated_content != content:
               readme_path.write_text(updated_content, encoding="utf-8")
           PY

@@ -89,8 +89,12 @@ My dream is to contribute to the path toward AGI.
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=Boulea7&show_icons=true&hide_border=true&title_color=6E40C9&text_color=555555&icon_color=6E40C9&bg_color=00000000&commits_year=2026&cache_seconds=21600" />
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=Boulea7&show_icons=true&hide_border=true&hide=contribs&title_color=6E40C9&text_color=555555&icon_color=6E40C9&bg_color=00000000&commits_year=2026&cache_seconds=21600" />
 <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Boulea7&layout=compact&hide_border=true&title_color=6E40C9&text_color=555555&bg_color=00000000&langs_count=8&cache_seconds=21600" />
+
+<br/>
+
+<img src="https://img.shields.io/badge/Contributed%20to%20%282026%29-12%20repos-D4A017?style=flat-square" alt="Contributed to 12 repositories in 2026" />
 
 <br/>
 
