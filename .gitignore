@@ -1,0 +1,20 @@
+# Local AI collaboration docs
+AGENTS.md
+AGENTS.override.md
+CLAUDE.md
+CLAUDE.override.md
+
+# Local tool metadata
+.claude/
+.codex/
+
+# Sensitive files
+.env
+.env.*
+**/api_key*
+**/secret*
+credentials*
+*.pem
+*.key
+*.p12
+*.pfx

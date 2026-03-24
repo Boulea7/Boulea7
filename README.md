@@ -1,63 +1,38 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3000&pause=600&color=6E40C9&center=true&vCenter=true&width=620&lines=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%98%AF+Boulea7;%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91%E8%80%85;AI+%E5%B7%A5%E5%85%B7%E9%93%BE%E6%9E%84%E5%BB%BA%E8%80%85;Chrome+%E6%89%A9%E5%B1%95%E5%88%9B%E4%BD%9C%E8%80%85" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3000&pause=600&color=D4A017&center=true&vCenter=true&width=620&lines=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%98%AF+Boulea7;%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91%E8%80%85;%E5%BC%80%E5%8F%91%E8%80%85%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7%E4%BD%9C%E8%80%85;Chrome+%E6%89%A9%E5%B1%95%E5%88%9B%E4%BD%9C%E8%80%85" alt="Typing SVG" />
 
 <br/>
 
-**全栈开发者 · AI 工具链构建者 · Chrome 扩展创作者**
+**全栈开发者 · 开发者工具作者 · AI / Agent 实践者**
 
-热衷于打造提升开发体验的 AI 工具与产品。<br/>
-从命令行工具到浏览器扩展，从工具链到完整产品，持续构建中。
+<sub>Full-stack Developer · Developer Tools Builder · AI / Agent Practitioner</sub>
 
 <br/>
 
-<img src="https://komarev.com/ghpvc/?username=Boulea7&color=6E40C9&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" />
+<img src="https://komarev.com/ghpvc/?username=Boulea7&color=D4A017&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" />
 
 </div>
 
 ---
 
-## 技术栈
+## 关于我 | About Me
 
-<div align="center">
+**中文**
 
-<sub>Languages</sub>
+我主要在做三类事情：一类是 AI / Agent 相关项目，围绕记忆、上下文管理、多 Agent 协作与工程化落地持续打磨，包含 [`Codex-Auto-Memory`](https://github.com/Boulea7/Codex-Auto-Memory)、[`agent-worktree`](https://github.com/Boulea7/agent-worktree)、[`claude-session-sync`](https://github.com/Boulea7/claude-session-sync)、[`MindSnap`](https://github.com/Boulea7/MindSnap) 等；一类是更偏产品化的多平台全栈项目，例如 [`OpenInfinity`](https://github.com/Boulea7/OpenInfinity)、[`OpenWebClipper`](https://github.com/Boulea7/OpenWebClipper)、`VibeReader`（暂未公开）；还有一类是服务日常开发流程的辅助工具，例如 [`ccswitch-terminal`](https://github.com/Boulea7/ccswitch-terminal)、[`ohmyclaude`](https://github.com/Boulea7/ohmyclaude) 等。
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
-<img src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white" />
-<img src="https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white" />
+我希望把复杂能力做成真正稳定、好用、可落地的产品，也持续关注 Agent Teams、LLMs、LLM-based Agents、Agent Memory 等方向；此外，我也对一些软硬件结合的场景感兴趣，比如米家、HomeKit 等。目前我正在 BUPT 就读，欢迎开源项目联系我一起贡献代码、解决难题、完善工具链；也欢迎 AI 相关比赛、合作项目，以及对全栈 / AI / 开发者工具方向感兴趣的团队联系我。
 
-<br/>
+我的梦想，是参与到通往 AGI 的建设之中。
 
-<sub>Frontend</sub>
+**English**
 
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-<img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" />
-<img src="https://img.shields.io/badge/Vue-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D" />
-<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+I mainly work across three areas: AI / Agent projects around memory, context management, multi-agent collaboration, and engineering systems, including [`Codex-Auto-Memory`](https://github.com/Boulea7/Codex-Auto-Memory), [`agent-worktree`](https://github.com/Boulea7/agent-worktree), [`claude-session-sync`](https://github.com/Boulea7/claude-session-sync), and [`MindSnap`](https://github.com/Boulea7/MindSnap); product-oriented multi-platform full-stack projects such as [`OpenInfinity`](https://github.com/Boulea7/OpenInfinity), [`OpenWebClipper`](https://github.com/Boulea7/OpenWebClipper), and `VibeReader` (private); and developer tools for everyday workflows, such as [`ccswitch-terminal`](https://github.com/Boulea7/ccswitch-terminal) and [`ohmyclaude`](https://github.com/Boulea7/ohmyclaude).
 
-<br/>
+I care about turning complex capabilities into stable, useful, and shippable products. I am especially interested in Agent Teams, LLMs, LLM-based Agents, and Agent Memory, and I also enjoy software-hardware integration topics such as Mijia and HomeKit. I am currently studying at BUPT, and I welcome open-source collaboration, AI competitions, product collaborations, and conversations with teams interested in full-stack engineering, AI, and developer tooling.
 
-<sub>Backend</sub>
-
-<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
-<img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-<img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
-
-<br/>
-
-<sub>Data &amp; Infrastructure</sub>
-
-<img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
-<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
-<img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
-<img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
-<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-<img src="https://img.shields.io/badge/Chrome_Extension-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white" />
-
-</div>
+My dream is to contribute to the path toward AGI.
 
 ---
 
@@ -66,12 +41,12 @@
 <table width="100%">
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/Boulea7/ccswitch--terminal">ccswitch-terminal</a></h3>
+      <h3><a href="https://github.com/Boulea7/ccswitch-terminal">ccswitch-terminal</a></h3>
       <p>在终端中一键切换管理 Claude Code / Codex / Gemini CLI 供应商与 API Key，完美适配服务器及 CI/CD 环境</p>
       <p>
         <img src="https://img.shields.io/badge/Shell-121011?style=flat-square&logo=gnu-bash&logoColor=white" />
-        <img src="https://img.shields.io/github/stars/Boulea7/ccswitch--terminal?style=social" />
-        <img src="https://img.shields.io/github/last-commit/Boulea7/ccswitch--terminal?style=flat-square&color=6E40C9" />
+        <img src="https://img.shields.io/github/stars/Boulea7/ccswitch-terminal?style=social" />
+        <img src="https://img.shields.io/github/last-commit/Boulea7/ccswitch-terminal?style=flat-square&color=6E40C9" />
       </p>
     </td>
     <td width="50%" valign="top">
@@ -137,6 +112,50 @@
 
 ---
 
+## 技术栈
+
+<div align="center">
+
+<sub>Languages</sub>
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+<img src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white" />
+<img src="https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white" />
+
+<br/>
+
+<sub>Frontend</sub>
+
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+<img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" />
+<img src="https://img.shields.io/badge/Vue-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D" />
+<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+<img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+
+<br/>
+
+<sub>Backend</sub>
+
+<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
+<img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
+<img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" />
+
+<br/>
+
+<sub>Data &amp; Infrastructure</sub>
+
+<img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
+<img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
+<img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/Chrome_Extension-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white" />
+
+</div>
+
+---
+
 ## 联系我
 
 <div align="center">
@@ -144,6 +163,8 @@
 <a href="mailto:pvt.blocksongs@gmail.com">
   <img src="https://img.shields.io/badge/Email-pvt.blocksongs%40gmail.com-6E40C9?style=for-the-badge&logo=gmail&logoColor=white" />
 </a>
+&nbsp;
+<img src="https://img.shields.io/badge/QQ-1905391059-12B7F5?style=for-the-badge&logo=tencentqq&logoColor=white" />
 &nbsp;
 <a href="https://github.com/Boulea7">
   <img src="https://img.shields.io/badge/GitHub-Boulea7-181717?style=for-the-badge&logo=github&logoColor=white" />
