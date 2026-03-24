@@ -22,7 +22,7 @@
 
 我主要在做三类事情：一类是 AI / Agent 相关项目，围绕记忆、上下文管理、多 Agent 协作与工程化落地持续打磨，包含 [`Codex-Auto-Memory`](https://github.com/Boulea7/Codex-Auto-Memory)、[`agent-worktree`](https://github.com/Boulea7/agent-worktree)、[`claude-session-sync`](https://github.com/Boulea7/claude-session-sync)、[`MindSnap`](https://github.com/Boulea7/MindSnap) 等；一类是更偏产品化的多平台全栈项目，例如 [`OpenInfinity`](https://github.com/Boulea7/OpenInfinity)、[`OpenWebClipper`](https://github.com/Boulea7/OpenWebClipper)、`VibeReader`（暂未公开）；还有一类是服务日常开发流程的辅助工具，例如 [`ccswitch-terminal`](https://github.com/Boulea7/ccswitch-terminal)、[`ohmyclaude`](https://github.com/Boulea7/ohmyclaude) 等。
 
-我希望把复杂能力做成真正稳定、好用、可落地的产品，也持续关注 Agent Teams、LLMs、LLM-based Agents、Agent Memory 等方向；此外，我也对一些软硬件结合的场景感兴趣，比如 Xiaomi/Mijia smart home、HomeKit 等。目前我正在 BUPT 就读，欢迎开源项目联系我一起贡献代码、解决难题、完善工具链；也欢迎 AI 相关比赛、合作项目，以及对全栈 / AI / 开发者工具方向感兴趣的团队联系我。
+我希望把复杂能力打磨成真正稳定、好用、可落地的产品，也长期关注 Agent Teams、LLMs、LLM-based Agents、Agent Memory 等方向；同时，我也对软硬件结合的场景保持浓厚兴趣，比如 Xiaomi/Mijia smart home、HomeKit 等。目前我正在 BUPT 就读，欢迎开源项目与我一起贡献代码、攻克难题、完善工具链；也欢迎 AI 相关比赛、合作项目，以及对全栈 / AI / 开发者工具方向感兴趣的团队联系我。
 
 我的梦想，是参与到通往 AGI 的建设之中。
 
@@ -30,7 +30,7 @@
 
 I mainly work across three areas: AI / Agent projects around memory, context management, multi-agent collaboration, and engineering systems, including [`Codex-Auto-Memory`](https://github.com/Boulea7/Codex-Auto-Memory), [`agent-worktree`](https://github.com/Boulea7/agent-worktree), [`claude-session-sync`](https://github.com/Boulea7/claude-session-sync), and [`MindSnap`](https://github.com/Boulea7/MindSnap); product-oriented multi-platform full-stack projects such as [`OpenInfinity`](https://github.com/Boulea7/OpenInfinity), [`OpenWebClipper`](https://github.com/Boulea7/OpenWebClipper), and `VibeReader` (private); and developer tools for everyday workflows, such as [`ccswitch-terminal`](https://github.com/Boulea7/ccswitch-terminal) and [`ohmyclaude`](https://github.com/Boulea7/ohmyclaude).
 
-I care about turning complex capabilities into stable, useful, and shippable products. I am especially interested in Agent Teams, LLMs, LLM-based Agents, and Agent Memory, and I also enjoy software-hardware integration topics such as Xiaomi/Mijia smart home and HomeKit. I am currently studying at BUPT, and I welcome open-source collaboration, AI competitions, product collaborations, and conversations with teams interested in full-stack engineering, AI, and developer tooling.
+I want to turn complex capabilities into stable, useful, and shippable products. I am especially interested in Agent Teams, LLMs, LLM-based Agents, and Agent Memory, and I am also drawn to software-hardware integration scenarios such as Xiaomi/Mijia smart home and HomeKit. I am currently studying at BUPT, and I welcome open-source collaboration, AI competitions, product collaborations, and conversations with teams interested in full-stack engineering, AI, and developer tooling.
 
 My dream is to contribute to the path toward AGI.
 
@@ -41,15 +41,6 @@ My dream is to contribute to the path toward AGI.
 <table width="100%">
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/Boulea7/ccswitch-terminal">ccswitch-terminal</a></h3>
-      <p>在终端中一键切换管理 Claude Code / Codex / Gemini CLI 供应商与 API Key，完美适配服务器及 CI/CD 环境</p>
-      <p>
-        <img src="https://img.shields.io/badge/Shell-121011?style=flat-square&logo=gnu-bash&logoColor=white" />
-        <img src="https://img.shields.io/github/stars/Boulea7/ccswitch-terminal?style=social" />
-        <img src="https://img.shields.io/github/last-commit/Boulea7/ccswitch-terminal?style=flat-square&color=D4A017" />
-      </p>
-    </td>
-    <td width="50%" valign="top">
       <h3><a href="https://github.com/Boulea7/Codex-Auto-Memory">Codex-Auto-Memory</a></h3>
       <p>Codex 跨会话自动记忆插件，沉淀项目上下文与用户偏好，保持协作连续性</p>
       <p>
@@ -59,8 +50,6 @@ My dream is to contribute to the path toward AGI.
         <img src="https://img.shields.io/github/last-commit/Boulea7/Codex-Auto-Memory?style=flat-square&color=D4A017" />
       </p>
     </td>
-  </tr>
-  <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/Boulea7/agent-worktree">agent-worktree</a></h3>
       <p>面向编码 Agent 的 worktree 原生编排框架，用隔离尝试、并行探索与可验证流程挑选更好的结果</p>
@@ -71,6 +60,8 @@ My dream is to contribute to the path toward AGI.
         <img src="https://img.shields.io/github/last-commit/Boulea7/agent-worktree?style=flat-square&color=D4A017" />
       </p>
     </td>
+  </tr>
+  <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/Boulea7/OpenInfinity">OpenInfinity</a></h3>
       <p>开源浏览器首页扩展，精美界面 + 网址管理 + 天气 / 笔记 / 壁纸等多组件</p>
@@ -79,6 +70,15 @@ My dream is to contribute to the path toward AGI.
         <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
         <img src="https://img.shields.io/github/stars/Boulea7/OpenInfinity?style=social" />
         <img src="https://img.shields.io/github/last-commit/Boulea7/OpenInfinity?style=flat-square&color=D4A017" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/Boulea7/ccswitch-terminal">ccswitch-terminal</a></h3>
+      <p>在终端中一键切换管理 Claude Code / Codex / Gemini CLI 供应商与 API Key，完美适配服务器及 CI/CD 环境</p>
+      <p>
+        <img src="https://img.shields.io/badge/Shell-121011?style=flat-square&logo=gnu-bash&logoColor=white" />
+        <img src="https://img.shields.io/github/stars/Boulea7/ccswitch-terminal?style=social" />
+        <img src="https://img.shields.io/github/last-commit/Boulea7/ccswitch-terminal?style=flat-square&color=D4A017" />
       </p>
     </td>
   </tr>
@@ -169,6 +169,15 @@ My dream is to contribute to the path toward AGI.
 工作机会、开源合作、AI 比赛等欢迎 <a href="mailto:pvt.blocksongs@gmail.com?subject=Hello%20Boulea7">邮件联系我</a>。<br/>
 For opportunities, open-source collaboration, or AI competitions, feel free to <a href="mailto:pvt.blocksongs@gmail.com?subject=Hello%20Boulea7">email me</a>.
 </sub>
+
+<br/>
+<br/>
+
+<img src="https://img.shields.io/badge/Open%20to%20Work-D4A017?style=flat-square" alt="Open to Work" />
+&nbsp;
+<img src="https://img.shields.io/badge/Open%20Source%20Collaboration-D4A017?style=flat-square" alt="Open Source Collaboration" />
+&nbsp;
+<img src="https://img.shields.io/badge/AI%20Competitions-D4A017?style=flat-square" alt="AI Competitions" />
 
 <br/>
 <br/>
