@@ -1,0 +1,66 @@
+name: Update README Stats Year
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - README.md
+      - .github/workflows/update-readme-stats-year.yml
+
+jobs:
+  update-year:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update current year in README stats card
+        run: |
+          export CURRENT_YEAR="$(date -u +%Y)"
+          python3 - <<'PY'
+          import os
+          import re
+          from pathlib import Path
+
+          readme_path = Path("README.md")
+          content = readme_path.read_text(encoding="utf-8")
+          current_year = os.environ["CURRENT_YEAR"]
+
+          pattern = re.compile(r'(github-readme-stats\.vercel\.app/api\?username=Boulea7[^"\n]*)')
+          match = pattern.search(content)
+          if not match:
+              raise SystemExit("GitHub stats card URL not found in README.md")
+
+          url = match.group(1)
+          if "commits_year=" in url:
+              updated_url = re.sub(r"commits_year=\d{4}", f"commits_year={current_year}", url, count=1)
+          else:
+              updated_url = f"{url}&commits_year={current_year}"
+
+          if "cache_seconds=" not in updated_url:
+              updated_url = f"{updated_url}&cache_seconds=21600"
+
+          updated_content = content[:match.start(1)] + updated_url + content[match.end(1):]
+          if updated_content != content:
+              readme_path.write_text(updated_content, encoding="utf-8")
+          PY
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "No README update needed."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "ci: refresh README stats year"
+          git push
