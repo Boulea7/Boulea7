@@ -36,30 +36,6 @@ My dream is to contribute to the path toward AGI.
 
 ---
 
-## 支持我 | Support Me
-
-<div align="center">
-
-<sub>
-如果你喜欢我正在做的项目，或愿意支持我继续投入 AI / Agent、全栈产品与开发者工具相关的工作，欢迎赞助我。<br/>
-If you like what I am building and want to support my work on AI / Agent projects, full-stack products, and developer tools, you can support me here.
-</sub>
-
-<br/>
-<br/>
-
-<a href="https://afdian.com/a/Boulea7" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.shields.io/badge/%E7%88%B1%E5%8F%91%E7%94%B5-Boulea7-946CE6?style=for-the-badge" alt="Support me on Afdian" />
-</a>
-&nbsp;
-<a href="https://buymeacoffee.com/boulea7" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-boulea7-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=000000" alt="Support me on Buy Me a Coffee" />
-</a>
-
-</div>
-
----
-
 ## 精选项目
 
 <table width="100%">
@@ -180,6 +156,30 @@ If you like what I am building and want to support my work on AI / Agent project
 <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
 <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
 <img src="https://img.shields.io/badge/Chrome_Extension-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white" />
+
+</div>
+
+---
+
+## 支持我 | Support Me
+
+<div align="center">
+
+<sub>
+如果你喜欢我正在做的项目，或愿意支持我继续投入 AI / Agent、全栈产品与开发者工具相关的工作，欢迎赞助我。<br/>
+If you like what I am building and want to support my work on AI / Agent projects, full-stack products, and developer tools, you can support me here.
+</sub>
+
+<br/>
+<br/>
+
+<a href="https://afdian.com/a/Boulea7" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/badge/%E7%88%B1%E5%8F%91%E7%94%B5-Boulea7-946CE6?style=for-the-badge" alt="Support me on Afdian" />
+</a>
+&nbsp;
+<a href="https://buymeacoffee.com/boulea7" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-boulea7-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=000000" alt="Support me on Buy Me a Coffee" />
+</a>
 
 </div>
 
