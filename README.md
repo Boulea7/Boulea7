@@ -174,7 +174,7 @@ If you like what I am building and want to support my work on AI / Agent project
 <br/>
 
 <a href="https://afdian.com/a/Boulea7" target="_blank" rel="noopener noreferrer">
-  <img src="https://img.shields.io/badge/%E7%88%B1%E5%8F%91%E7%94%B5-Boulea7-946CE6?style=for-the-badge" alt="Support me on Afdian" />
+  <img src="https://img.shields.io/badge/%E7%88%B1%E5%8F%91%E7%94%B5-Boulea7-D4A017?style=for-the-badge" alt="Support me on Afdian" />
 </a>
 &nbsp;
 <a href="https://buymeacoffee.com/boulea7" target="_blank" rel="noopener noreferrer">
