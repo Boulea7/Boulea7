@@ -95,7 +95,7 @@ My dream is to contribute to the path toward AGI.
 
 <br/>
 
-<img src="https://img.shields.io/badge/Contributed%20to%20%282026%29-14%20repos-D4A017?style=flat-square" alt="Contributed to 14 repositories in 2026" />
+<img src="https://img.shields.io/badge/Contributed%20to%20%282026%29-18%20repos-D4A017?style=flat-square" alt="Contributed to 18 repositories in 2026" />
 
 <br/>
 
