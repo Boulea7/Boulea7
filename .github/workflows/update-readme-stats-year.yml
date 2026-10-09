@@ -162,7 +162,7 @@ jobs:
 
           contrib_badge = (
               f"https://img.shields.io/badge/Contributed%20to%20%28{current_year}%29-"
-              f"{len(repos)}%20repos-6E7781?style=flat-square"
+              f"{len(repos)}%20repos-D4A017?style=flat-square"
           )
           contrib_alt = f"Contributed to {len(repos)} repositories in {current_year}"
 

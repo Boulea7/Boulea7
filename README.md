@@ -2,7 +2,7 @@ You can call me **Boulea7** or **ln**.
 
 **Harness · Context · Long-Horizon · RL & RSI**
 
-[Projects](https://github.com/Boulea7?tab=repositories) · <img src="https://komarev.com/ghpvc/?username=Boulea7&color=6E7781&style=flat&label=PROFILE+VIEWS" alt="Profile Views" />
+[Projects](https://github.com/Boulea7?tab=repositories) · <img src="https://komarev.com/ghpvc/?username=Boulea7&color=0969DA&style=flat&label=PROFILE+VIEWS" alt="Profile Views" />
 
 <p>
 <picture>
@@ -20,14 +20,14 @@ You can call me **Boulea7** or **ln**.
 </p>
 
 <p>
-<img src="https://img.shields.io/badge/Contributed%20to%20%282026%29-261%20repos-6E7781?style=flat-square" alt="Contributed to 261 repositories in 2026" />
+<img src="https://img.shields.io/badge/Contributed%20to%20%282026%29-261%20repos-D4A017?style=flat-square" alt="Contributed to 261 repositories in 2026" />
 </p>
 
 <p>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Boulea7/Boulea7/output/github-contribution-grid-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Boulea7/Boulea7/output/github-contribution-grid-snake.svg">
-  <img width="360" alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/Boulea7/Boulea7/output/github-contribution-grid-snake.svg">
+  <img width="100%" alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/Boulea7/Boulea7/output/github-contribution-grid-snake.svg">
 </picture>
 </p>
 
@@ -35,9 +35,9 @@ You can call me **Boulea7** or **ln**.
 
 <p>
 <a href="https://afdian.com/a/Boulea7">
-  <img src="https://img.shields.io/badge/%E7%88%B1%E5%8F%91%E7%94%B5-Boulea7-57606A?style=flat&labelColor=30363D" alt="Support me on Afdian" />
+  <img src="https://img.shields.io/badge/%E7%88%B1%E5%8F%91%E7%94%B5-Boulea7-0969DA?style=flat&labelColor=30363D" alt="Support me on Afdian" />
 </a>
 <a href="https://buymeacoffee.com/boulea7">
-  <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-boulea7-57606A?style=flat&labelColor=30363D" alt="Support me on Buy Me a Coffee" />
+  <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-boulea7-D4A017?style=flat&labelColor=30363D" alt="Support me on Buy Me a Coffee" />
 </a>
 </p>
