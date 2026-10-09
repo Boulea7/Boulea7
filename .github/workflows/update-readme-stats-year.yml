@@ -147,21 +147,22 @@ jobs:
               cursors = next_cursors
 
           stats_pattern = re.compile(r'(github-readme-stats\.vercel\.app/api\?username=Boulea7[^"\n]*)')
-          stats_match = stats_pattern.search(content)
-          if not stats_match:
+          if not stats_pattern.search(content):
               raise SystemExit("GitHub stats card URL not found in README.md")
 
-          stats_url = stats_match.group(1)
-          if "commits_year=" in stats_url:
-              stats_url = re.sub(r"commits_year=\d{4}", f"commits_year={current_year}", stats_url, count=1)
-          else:
-              stats_url = f"{stats_url}&commits_year={current_year}"
-          if "cache_seconds=" not in stats_url:
-              stats_url = f"{stats_url}&cache_seconds=21600"
+          def update_stats_url(match):
+              stats_url = match.group(1)
+              if "commits_year=" in stats_url:
+                  stats_url = re.sub(r"commits_year=\d{4}", f"commits_year={current_year}", stats_url, count=1)
+              else:
+                  stats_url = f"{stats_url}&commits_year={current_year}"
+              if "cache_seconds=" not in stats_url:
+                  stats_url = f"{stats_url}&cache_seconds=21600"
+              return stats_url
 
           contrib_badge = (
               f"https://img.shields.io/badge/Contributed%20to%20%28{current_year}%29-"
-              f"{len(repos)}%20repos-D4A017?style=flat-square"
+              f"{len(repos)}%20repos-6E7781?style=flat-square"
           )
           contrib_alt = f"Contributed to {len(repos)} repositories in {current_year}"
 
@@ -181,9 +182,7 @@ jobs:
                   1,
               )
 
-          updated_content = (
-              updated_content[: stats_match.start(1)] + stats_url + updated_content[stats_match.end(1) :]
-          )
+          updated_content = stats_pattern.sub(update_stats_url, updated_content)
 
           if updated_content != content:
               readme_path.write_text(updated_content, encoding="utf-8")
