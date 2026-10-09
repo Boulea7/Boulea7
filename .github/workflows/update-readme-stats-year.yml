@@ -1,25 +1,35 @@
-name: Update README Stats
+name: Update Profile Stats
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 3 * * *"
+    - cron: "17 */6 * * *"
   push:
     branches:
       - main
     paths:
       - README.md
       - .github/workflows/update-readme-stats-year.yml
+      - scripts/update_external_contributions.py
+      - tests/**
+
+concurrency:
+  group: profile-stats-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   update-stats:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     permissions:
       contents: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Verify stats updater
+        run: python3 -B -m unittest discover -s tests -v
 
       - name: Update current-year README stats
         env:
@@ -47,6 +57,7 @@ jobs:
           query($login:String!,$from:DateTime!,$to:DateTime!,$issueAfter:String,$prAfter:String,$reviewAfter:String,$repoAfter:String){
             user(login:$login){
               contributionsCollection(from:$from, to:$to){
+                totalRepositoriesWithContributedCommits
                 commitContributionsByRepository(maxRepositories:100){
                   repository { nameWithOwner }
                 }
@@ -82,10 +93,10 @@ jobs:
                   },
                   method="POST",
               )
-              with urllib.request.urlopen(request) as response:
+              with urllib.request.urlopen(request, timeout=30) as response:
                   payload = json.loads(response.read().decode("utf-8"))
               if "errors" in payload:
-                  raise SystemExit(f"GraphQL query failed: {payload['errors']}")
+                  raise SystemExit("GitHub GraphQL query failed for annual contributions.")
               return payload["data"]["user"]["contributionsCollection"]
 
           repos = set()
@@ -96,8 +107,16 @@ jobs:
               "repoAfter": None,
           }
           commit_loaded = False
+          connections = {
+              "issueAfter": ("issueContributions", "issue"),
+              "prAfter": ("pullRequestContributions", "pullRequest"),
+              "reviewAfter": ("pullRequestReviewContributions", "pullRequest"),
+              "repoAfter": ("repositoryContributions", None),
+          }
+          finished = set()
+          seen_cursors = {key: set() for key in connections}
 
-          while True:
+          for _ in range(1000):
               collection = run_query(
                   {
                       "login": github_login,
@@ -108,43 +127,34 @@ jobs:
               )
 
               if not commit_loaded:
-                  for item in collection["commitContributionsByRepository"]:
+                  commit_repos = collection["commitContributionsByRepository"]
+                  if collection["totalRepositoriesWithContributedCommits"] > len(commit_repos):
+                      raise SystemExit("Annual commit repository list is incomplete; keeping previous stats.")
+                  for item in commit_repos:
                       repos.add(item["repository"]["nameWithOwner"])
                   commit_loaded = True
 
-              for item in collection["issueContributions"]["nodes"]:
-                  repos.add(item["issue"]["repository"]["nameWithOwner"])
-              for item in collection["pullRequestContributions"]["nodes"]:
-                  repos.add(item["pullRequest"]["repository"]["nameWithOwner"])
-              for item in collection["pullRequestReviewContributions"]["nodes"]:
-                  repos.add(item["pullRequest"]["repository"]["nameWithOwner"])
-              for item in collection["repositoryContributions"]["nodes"]:
-                  repos.add(item["repository"]["nameWithOwner"])
+              for cursor_key, (connection_name, nested_key) in connections.items():
+                  if cursor_key in finished:
+                      continue
+                  connection = collection[connection_name]
+                  for item in connection["nodes"]:
+                      contribution = item[nested_key] if nested_key else item
+                      repos.add(contribution["repository"]["nameWithOwner"])
+                  page_info = connection["pageInfo"]
+                  if not page_info["hasNextPage"]:
+                      finished.add(cursor_key)
+                      continue
+                  next_cursor = page_info["endCursor"]
+                  if not isinstance(next_cursor, str) or not next_cursor or next_cursor in seen_cursors[cursor_key]:
+                      raise SystemExit("Annual contribution pagination cursor did not advance.")
+                  seen_cursors[cursor_key].add(next_cursor)
+                  cursors[cursor_key] = next_cursor
 
-              next_cursors = {
-                  "issueAfter": collection["issueContributions"]["pageInfo"]["endCursor"]
-                  if collection["issueContributions"]["pageInfo"]["hasNextPage"]
-                  else None,
-                  "prAfter": collection["pullRequestContributions"]["pageInfo"]["endCursor"]
-                  if collection["pullRequestContributions"]["pageInfo"]["hasNextPage"]
-                  else None,
-                  "reviewAfter": collection["pullRequestReviewContributions"]["pageInfo"]["endCursor"]
-                  if collection["pullRequestReviewContributions"]["pageInfo"]["hasNextPage"]
-                  else None,
-                  "repoAfter": collection["repositoryContributions"]["pageInfo"]["endCursor"]
-                  if collection["repositoryContributions"]["pageInfo"]["hasNextPage"]
-                  else None,
-              }
-
-              if next_cursors == {
-                  "issueAfter": None,
-                  "prAfter": None,
-                  "reviewAfter": None,
-                  "repoAfter": None,
-              }:
+              if len(finished) == len(connections):
                   break
-
-              cursors = next_cursors
+          else:
+              raise SystemExit("Annual contribution pagination exceeded its safety limit.")
 
           stats_pattern = re.compile(r'(github-readme-stats\.vercel\.app/api\?username=Boulea7[^"\n]*)')
           if not stats_pattern.search(content):
@@ -188,15 +198,21 @@ jobs:
               readme_path.write_text(updated_content, encoding="utf-8")
           PY
 
+      - name: Update all-time external contributions
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_LOGIN: Boulea7
+        run: python3 -B scripts/update_external_contributions.py
+
       - name: Commit changes
         run: |
-          if git diff --quiet -- README.md; then
-            echo "No README update needed."
+          git add -- README.md assets/external-contributions-light.svg assets/external-contributions-dark.svg
+          if git diff --cached --quiet; then
+            echo "No profile stats update needed."
             exit 0
           fi
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "ci: refresh README stats year"
+          git commit -m "ci: refresh profile stats"
           git push
