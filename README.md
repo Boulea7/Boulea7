@@ -14,7 +14,7 @@ You can call me **Boulea7** or **ln**.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Boulea7/Boulea7/main/assets/external-contributions-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Boulea7/Boulea7/main/assets/external-contributions-light.svg">
-  <img src="https://raw.githubusercontent.com/Boulea7/Boulea7/main/assets/external-contributions-light.svg" alt="All-time external contributions: 72 merged PRs across 59 external public repositories. Snapshot: 2026-10-10 (UTC). Excludes repositories owned by Boulea7." width="360" />
+  <img src="https://raw.githubusercontent.com/Boulea7/Boulea7/main/assets/external-contributions-light.svg" alt="All-time external contributions: 72 merged PRs across 59 external public repositories. Snapshot: 2026-10-11 (UTC). Excludes repositories owned by Boulea7." width="360" />
 </picture>
 </a>
 </p>
