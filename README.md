@@ -20,7 +20,7 @@ You can call me **Boulea7** or **ln**.
 </p>
 
 <p>
-<img src="https://img.shields.io/badge/Contributed%20to%20%282026%29-282%20repos-D4A017?style=flat-square" alt="Contributed to 282 repositories in 2026" />
+<img src="https://img.shields.io/badge/Contributed%20to%20%282026%29-284%20repos-D4A017?style=flat-square" alt="Contributed to 284 repositories in 2026" />
 </p>
 
 <p>
