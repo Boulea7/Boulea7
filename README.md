@@ -14,13 +14,13 @@ You can call me **Boulea7** or **ln**.
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Boulea7/Boulea7/main/assets/external-contributions-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Boulea7/Boulea7/main/assets/external-contributions-light.svg">
-  <img src="https://raw.githubusercontent.com/Boulea7/Boulea7/main/assets/external-contributions-light.svg" alt="All-time external contributions: 102 merged PRs across 75 external public repositories. Snapshot: 2026-10-23 (UTC). Excludes repositories owned by Boulea7." width="360" />
+  <img src="https://raw.githubusercontent.com/Boulea7/Boulea7/main/assets/external-contributions-light.svg" alt="All-time external contributions: 103 merged PRs across 76 external public repositories. Snapshot: 2026-10-24 (UTC). Excludes repositories owned by Boulea7." width="360" />
 </picture>
 </a>
 </p>
 
 <p>
-<img src="https://img.shields.io/badge/Contributed%20to%20%282026%29-295%20repos-D4A017?style=flat-square" alt="Contributed to 295 repositories in 2026" />
+<img src="https://img.shields.io/badge/Contributed%20to%20%282026%29-296%20repos-D4A017?style=flat-square" alt="Contributed to 296 repositories in 2026" />
 </p>
 
 <p>
